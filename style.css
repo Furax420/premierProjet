@@ -126,7 +126,7 @@ input:focus {
 }
 
 .filtre {
-  border: 1px solid #f2f2f2;
+  border: 2px solid #f2f2f2;
   border-radius: 25px;
   text-align: center;
   justify-content: center;
@@ -137,6 +137,152 @@ input:focus {
   font-size: 17px;
 }
 
+.filtre:hover {
+  background-color: #deebff;
+}
+/* Changer la couleur des icones FONTAWESWOME */
 .filtres i {
   color: #0065fc;
+}
+
+.infos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  flex-grow: 0;
+  margin-top: 28px;
+  margin-left: 70px;
+}
+.info-logo {
+  border: 1px solid #d9d9d9;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #0065fc;
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-info {
+  padding-top: 2px;
+}
+
+.block-card {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin: 50px 5% 0 55px;
+}
+
+.block-card h2 {
+  padding-left: 37px;
+  margin-top: 49px;
+}
+
+.first-block {
+  display: flex;
+  flex-direction: row;
+  height: 626px;
+  width: 880px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+}
+
+.second-block {
+  position: relative;
+  height: 625px;
+  width: 420px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+}
+/* Icone dans le blocs LES PLUS POPULAIRES */
+.grow {
+  position: absolute;
+  right: 46px;
+  top: 55px;
+  color: #0065fc;
+  width: 18px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-block {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CARTE DU PREMIER BLOCK */
+.card-container-first-block {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  margin: 10px;
+  max-width: 246px;
+  max-height: 199px;
+  background-color: #ffffff;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+.card {
+  border: 5px solid #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100%;
+  float: left;
+}
+
+.card-body {
+  width: 100%;
+  padding: 10px;
+  float: left;
+}
+
+.title {
+  margin-top: -10px;
+  max-width: 246px;
+  font-size: 16px;
+}
+
+.text {
+  margin-top: -15px;
+  font-size: 14px;
+}
+
+.stars {
+  margin-top: -10px;
+  display: flex;
+}
+
+.stars i {
+  color: #ccc;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 246px;
+  max-height: 124px;
+}
+
+#bright {
+  color: #0065fc;
+}
+
+.show-more {
+  padding-left: 56px;
+  font-size: 18px;
+  font-weight: 700;
 }
