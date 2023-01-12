@@ -21,10 +21,24 @@ header {
 .nav-link a {
   text-decoration: none;
   margin-right: 94px;
+  position: relative;
 }
 
 .nav-link a:hover {
   color: #0065fc;
+}
+
+/* ////// Affichage de la barre bleue au survol de souris /////  */
+
+.nav-link a:hover::before {
+  content: "";
+  display: block;
+  width: 150%;
+  height: 2px;
+  background-color: #0065fc;
+  position: absolute;
+  top: -48px;
+  left: -25%;
 }
 
 .nav-link {
@@ -35,12 +49,94 @@ header {
 
 .titre h1 {
   font-weight: 700;
+  font-size: 22px;
 }
 
 .sous-titre h2 {
   font-weight: 400;
+  font-size: 16px;
 }
 .hdp {
   position: absolute;
   left: 55px;
+}
+
+/* Mise en horizontal du formulaire : */
+.form-horizontal {
+  display: flex;
+  flex-wrap: nowrap;
+  border: none;
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 55px;
+}
+/*  */
+
+.loc-button {
+  background: #f2f2f2;
+  font-size: 18px;
+  padding: 14px 18px;
+  border: 1px solid #f2f2f2;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.search-text {
+  border: 1px solid #f2f2f2;
+  font-weight: 700;
+  padding-left: 15px;
+  font-size: 18px;
+}
+
+/* Suppression des bordures noires épaisses quand on clique sur la zone a remplir */
+input:focus {
+  border: none;
+  outline: 1px solid #f2f2f2;
+}
+
+.search-button {
+  border: none;
+  background-color: #0065fc;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
+  text-align: center;
+  padding: 14px 16px;
+  line-height: 21px;
+  border: 1px solid #0065fc;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.filtres {
+  margin-top: 205px;
+  margin-left: 72px;
+}
+
+.filtres-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: 45px;
+  gap: 48px;
+}
+
+.filtres p {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.filtre {
+  border: 1px solid #f2f2f2;
+  border-radius: 25px;
+  text-align: center;
+  justify-content: center;
+  flex-grow: 0;
+  width: auto;
+  padding: 1em 1em;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.filtres i {
+  color: #0065fc;
 }
