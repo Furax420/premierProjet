@@ -172,48 +172,45 @@ input:focus {
 }
 
 .block-card {
+  position: absolute;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap-reverse;
   gap: 40px;
   margin: 50px 5% 0 55px;
 }
 
 .block-card h2 {
-  padding-left: 37px;
-  margin-top: 49px;
+  padding-left: 1em;
+  margin-top: 1.8em;
 }
 
 .first-block {
   display: flex;
   flex-direction: row;
-  height: 626px;
-  width: 880px;
+  flex-wrap: wrap;
+  height: auto;
+  width: 60%;
   background-color: #f2f2f2;
   border-radius: 20px;
 }
 
 .second-block {
   position: relative;
-  height: 625px;
-  width: 420px;
+  height: auto;
+  width: auto;
   background-color: #f2f2f2;
   border-radius: 20px;
+  padding-bottom: 25px;
 }
 /* Icone dans le blocs LES PLUS POPULAIRES */
 .grow {
   position: absolute;
-  right: 46px;
-  top: 55px;
+  left: 85%;
+  right: 0%;
+  top: 7%;
+  bottom: 0%;
   color: #0065fc;
-  width: 18px;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-}
-
-.first-block {
-  display: flex;
-  flex-direction: column;
 }
 
 /* CARTE DU PREMIER BLOCK */
@@ -222,6 +219,7 @@ input:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 25px;
 }
 
 .card {
@@ -231,8 +229,6 @@ input:focus {
   max-height: 199px;
   background-color: #ffffff;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
-.card {
   border: 5px solid #ffffff;
   border-radius: 20px;
   overflow: hidden;
@@ -265,7 +261,8 @@ input:focus {
   display: flex;
 }
 
-.stars i {
+.stars,
+.stars-pop i {
   color: #ccc;
 }
 
@@ -285,4 +282,74 @@ input:focus {
   padding-left: 56px;
   font-size: 18px;
   font-weight: 700;
+}
+
+.card-body-pop {
+  padding: 10px;
+  float: left;
+  display: grid;
+  grid-column: 1fr 1fr;
+  grid-column-start: 2;
+}
+
+.image-container-pop {
+  grid-column-start: 1;
+}
+
+.image-container-pop {
+  width: 100%;
+  float: left;
+}
+
+.card-pop {
+  width: 100%;
+  margin: 10px;
+  width: 343px;
+  height: 144px;
+  background-color: #ffffff;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  border: 5px solid #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  display: grid;
+}
+
+.card-body-pop {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.image-container-pop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  width: 137px;
+  height: 144px;
+}
+
+.title-pop {
+  font-size: 16px;
+  margin: auto;
+  position: absolute;
+  top: 6px;
+}
+
+.text-pop {
+  font-size: 14px;
+  margin: auto;
+  position: absolute;
+  top: 46px;
+}
+
+.stars-pop {
+  position: relative;
+  top: 110px;
+}
+
+.card-container-second-block {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px 0 37px;
 }
