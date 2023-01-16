@@ -10,6 +10,10 @@ header {
   height: 126px;
 }
 
+body {
+  margin-right: 6%; /* ajoute une marge de 5% à droite de la page pour éviter le déffilement horizontal */
+}
+
 .logo img {
   position: absolute;
   left: 55px;
@@ -43,7 +47,7 @@ header {
 
 .nav-link {
   position: absolute;
-  right: -14px;
+  right: 0%;
   top: 48px;
 }
 
@@ -92,7 +96,9 @@ input:focus {
   border: none;
   outline: 1px solid #f2f2f2;
 }
-
+.search-icon {
+  display: none;
+}
 .search-button {
   border: none;
   background-color: #0065fc;
@@ -175,7 +181,7 @@ input:focus {
   position: relative;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   gap: 40px;
   left: 50px;
   top: 39px;
@@ -192,7 +198,7 @@ input:focus {
   flex-direction: row;
   flex-wrap: wrap;
   height: auto;
-  width: 60%;
+  width: 65%;
   background-color: #f2f2f2;
   border-radius: 20px;
 }
@@ -333,6 +339,7 @@ input:focus {
   margin: auto;
   position: absolute;
   top: 6px;
+  left: 50%;
 }
 
 .text-pop {
@@ -340,11 +347,16 @@ input:focus {
   margin: auto;
   position: absolute;
   top: 46px;
+  left: 50%;
 }
 
 .stars-pop {
-  position: relative;
+  position: absolute;
   top: 110px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  left: 50%;
 }
 
 .card-container-second-block {
@@ -361,8 +373,8 @@ input:focus {
   top: 60px;
   display: flex;
   flex-direction: row;
-  width: 100%;
   height: auto;
+  width: 100%;
   gap: 43px;
 }
 
@@ -381,11 +393,16 @@ input:focus {
   left: 50px;
 }
 
+#resize-img {
+  width: 100%;
+}
+
 .activities-card {
   position: absolute;
   top: 78.47px;
-  width: 302px;
-  height: 444.51px;
+  min-width: 90%;
+  max-width: 302px;
+  max-height: 444.51px;
   background-color: #ffffff;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   border-radius: 20px;
@@ -404,10 +421,335 @@ input:focus {
 .footer {
   position: relative;
   top: 700px;
-  margin: 0 50px;
+  margin-left: 50px;
   padding-bottom: 25px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   background-color: #d9d9d9;
+  width: 100%;
+}
+
+/* MISE EN PLACE DU RESPONSIVE DESIGN */
+
+/* RESPONSIVE DESIGN POUR TABLETTE */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav-link {
+    right: 0%;
+  }
+
+  .form-horizontal {
+    margin-top: 0;
+    margin-left: 38px;
+    position: absolute;
+  }
+  .hdp {
+    position: relative;
+  }
+  .filtres {
+    position: relative;
+    margin-top: 100px;
+    margin-left: 58px;
+  }
+  .filtres-container {
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 25px;
+  }
+
+  .filtre {
+    min-width: auto;
+    max-width: 100%;
+    font-size: 13px;
+    height: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .filtres p {
+    position: relative;
+    top: -7px;
+  }
+
+  .filtres i {
+    padding-right: 8px;
+  }
+
+  .infos {
+    position: relative;
+    margin: 10px 0 0px 52px;
+  }
+
+  .first-block {
+    width: 90%;
+    max-height: 626px;
+    padding-right: 50px;
+  }
+
+  .card-container-first-block {
+    width: auto;
+    gap: 20px;
+    padding: 0% 5%;
+    padding-right: 0;
+  }
+
+  .card {
+    width: 28%;
+    margin: 0;
+  }
+  .show-more {
+    padding-bottom: 30px;
+    padding-top: 25px;
+  }
+
+  .card-container-second-block {
+    flex-direction: row;
+    width: auto;
+    padding: 0% 5%;
+    padding-right: 0;
+    gap: 30px;
+  }
+
+  .card-pop {
+    height: 134px;
+  }
+
+  .second-block {
+    width: 90%;
+    padding-right: 50px;
+  }
+  .card-body-pop {
+    width: 50%;
+  }
+
+  .image-container-pop img {
+    width: 50%;
+  }
+
+  .title-pop {
+    font-size: 14px;
+  }
+
+  .text-pop {
+    font-size: 13px;
+  }
+  .stars-pop i {
+    font-size: 12px;
+  }
+  .grow {
+    left: 95%;
+    top: 17%;
+  }
+  .activities-block {
+    width: 97%;
+  }
+
+  .activities-card {
+    width: 182px;
+    height: 267px;
+    gap: 50px;
+  }
+  .activities-image-container img {
+    max-height: 211px;
+  }
+
+  .activities-title {
+    font-size: 16px;
+  }
+
+  .footer {
+    top: 500px;
+    width: 90%;
+    max-height: 626px;
+    padding-right: 50px;
+  }
+  .footer h2 {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  .footer p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  header {
+    height: 129px;
+  }
+  .logo {
+    position: relative;
+    left: 33%;
+  }
+
+  .nav-link {
+    margin-left: 33px;
+    gap: 41px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    font-size: 16px;
+    top: 100px;
+  }
+
+  .nav-link a:hover::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #0065fc;
+    position: absolute;
+    top: 33px;
+    left: -0%;
+  }
+
+  .hdp {
+    left: 15px;
+  }
+
+  .sous-titre h2 {
+    margin-left: 3px;
+  }
+
+  .form-horizontal {
+    margin-left: 0px;
+  }
+
+  .search-button {
+    display: none;
+  }
+  .search-icon {
+    display: block;
+    border: none;
+    background-color: #0065fc;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    font-style: normal;
+    text-align: center;
+    padding: 14px 16px;
+    line-height: 21px;
+    border: 1px solid #0065fc;
+    border-radius: 0px 15px 15px 0px;
+  }
+
+  .filtres {
+    margin-left: 20px;
+  }
+
+  .filtres-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(2, 1fr);
+    grid-gap: 31px;
+  }
+
+  .title-filtre {
+    grid-column: span 2;
+  }
+
+  .filtre {
+    position: relative;
+    top: -24px;
+    width: 100%;
+    height: 25px;
+    text-align: left;
+    font-size: 11px;
+    line-height: 25px;
+  }
+
+  .filtre i {
+    font-size: 15px;
+  }
+
+  .infos {
+    margin-left: 20px;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .info-logo {
+    border-radius: 55%;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+  }
+
+  .infos i {
+    font-size: 14px;
+  }
+  .p-info {
+    position: relative;
+    left: 35px;
+  }
+
+  .block-card {
+    flex-wrap: wrap-reverse;
+    left: -10px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .second-block {
+    border-radius: 0%;
+    min-width: 100%;
+    background-color: #f2f2f2;
+    margin-left: 0;
+  }
+
+  .first-block {
+    width: 100%;
+    margin-top: -40px;
+    border-radius: 0%;
+    background-color: white;
+  }
+  .card {
+    width: 335px;
+    max-width: 100%;
+    margin: 0 15px 0 15px;
+  }
+
+  .image-container img {
+    max-width: 100%;
+  }
+
+  .show-more {
+    display: none;
+  }
+
+  .activities-block {
+    flex-direction: column;
+    position: relative;
+    top: 80px;
+    left: -10%;
+  }
+
+  .activities-card-container {
+    margin-left: 0px;
+  }
+
+  .activities-card {
+    width: 100%;
+    margin: 10px;
+    max-width: 334px;
+    max-height: 190px;
+    background-color: #ffffff;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .activities-image-container img {
+    height: 134px;
+    width: 100%;
+  }
+
+  .footer {
+    top: 200px;
+    flex-direction: column;
+    left: -16%;
+    padding-left: 30px;
+  }
 }
