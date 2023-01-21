@@ -457,6 +457,10 @@ input:focus {
     width: 80%;
   }
 
+  .show-more {
+    padding-bottom: 35px;
+  }
+
   .activities-block {
     position: relative;
     display: flex;
@@ -466,14 +470,16 @@ input:focus {
   }
   .activities-card-container {
     position: relative;
-    height: 50%;
-    width: 20%;
-
-    max-height: 444px;
-    max-width: 302px;
+    min-height: auto;
+    min-width: 0%;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .activities-image-container img {
+    height: 211px;
+    width: 182px;
   }
 
   .activities-card {
@@ -483,23 +489,27 @@ input:focus {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     border-radius: 20px;
     overflow: hidden;
+    min-width: 0;
+    width: 182px;
+    height: 267px;
   }
   .activities-card-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid: center;
-    gap: 25px;
-    align-items: center;
-    justify-items: center;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  .activities-title {
+    font-size: 15px;
   }
 }
 
 /* RESPONSIVE DESIGN POUR TABLETTE */
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
-  * {
-  }
-
   .nav-link {
     padding-right: 72px;
   }
@@ -566,9 +576,10 @@ input:focus {
 
   .card-container-second-block {
     flex-direction: row;
-    gap: 23px;
     justify-items: flex-start;
     padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .card-body-pop {
@@ -580,7 +591,8 @@ input:focus {
   .card-pop {
     margin: auto;
     min-width: 30%;
-    height: auto;
+    width: 90%;
+    height: 100%;
   }
 
   .image-container-pop {
@@ -800,9 +812,18 @@ input:focus {
   }
 
   .card-pop {
+    min-width: 80%;
+    max-width: 80%;
     width: auto;
     height: auto;
+    justify-content: flex-start;
   }
+
+  .image-container-pop {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .first-block {
     width: 100%;
     background-color: #ffffff;
@@ -871,7 +892,7 @@ input:focus {
     display: flex;
     height: 53px;
   }
-  .activites-title {
+  .activities-title {
     padding-bottom: 12px;
   }
 
